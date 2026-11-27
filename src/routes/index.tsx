@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import logo from "@/assets/oferta-certa-logo.png.asset.json";
+
 import { products, discountPercent, formatBRL, type Product } from "@/data/products";
 
 export const Route = createFileRoute("/")({
@@ -21,7 +21,13 @@ const INSTAGRAM_URL = "#";
 const CONTACT_URL = "#";
 
 function Logo({ className = "" }: { className?: string }) {
-  return <img src={logo.url} alt="Oferta Certa" className={`rounded-lg object-cover ${className}`} />;
+  return (
+    <img
+      src="/oferta-certa-logo.png"
+      alt="Oferta Certa"
+      className={`rounded-lg object-contain ${className}`}
+    />
+  );
 }
 
 function Header() {
